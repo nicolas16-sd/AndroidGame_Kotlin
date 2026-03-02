@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -39,7 +40,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ExercicioWireframeTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
-                   StartScreen(modifier = Modifier.padding(innerPadding))
+                   GameOverScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -99,11 +100,11 @@ fun StartScreen(modifier: Modifier = Modifier) {
                 horizontalArrangement = Arrangement.Center
 
             ){
-                IconAndroid(modifier = Modifier.size(75.dp), color = Color.Green)
-                IconAndroid(modifier = Modifier.size(75.dp), color = Color.Red)
-                IconAndroid(modifier = Modifier.size(75.dp), color = Color.Blue)
-                IconAndroid(modifier = Modifier.size(75.dp), color = Color.Yellow)
-                IconAndroid(modifier = Modifier.size(75.dp), color = Color.Green)
+                IconAndroid(modifier = Modifier.size(65.dp), color = Color.Green)
+                IconAndroid(modifier = Modifier.size(65.dp), color = Color.Red)
+                IconAndroid(modifier = Modifier.size(65.dp), color = Color.Blue)
+                IconAndroid(modifier = Modifier.size(65.dp), color = Color.Yellow)
+                IconAndroid(modifier = Modifier.size(65.dp), color = Color.Green)
             }
 
         }
@@ -160,5 +161,30 @@ fun IconGame(modifier: Modifier = Modifier, color: Color) {
 
 @Composable
 fun GameOverScreen(modifier: Modifier = Modifier) {
-    
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Black),
+        contentAlignment = Alignment.Center
+    ) {
+            Row(
+                horizontalArrangement = Arrangement.SpaceEvenly,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                IconAndroid(Modifier.size(70.dp), Color.Green)
+                IconAndroid(Modifier.size(70.dp), Color.Red)
+                IconAndroid(Modifier.size(70.dp), Color.Blue)
+                IconAndroid(Modifier.size(70.dp), Color.Yellow)
+            }
+
+        Row(
+        ) {
+            Text(
+                text = "GAME OVER",
+                color = Color.White,
+                fontSize = 60.sp,
+                fontWeight = FontWeight.W600
+            )
+        }
+    }
 }
