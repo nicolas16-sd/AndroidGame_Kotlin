@@ -6,18 +6,11 @@ Projeto desenvolvido em **Kotlin** utilizando **Jetpack Compose**, simulando a i
 
 ## 📱 Screenshots
 
-### 🟢 Start Screen
+### 🟢 Start Screen e 🔴 Game Over Screen
 
 <p align="center">
-  <img src="screenshots/start_screen.png" width="300"/>
-</p>
-
----
-
-### 🔴 Game Over Screen
-
-<p align="center">
-  <img src="screenshots/game_over_screen.png" width="300"/>
+  <img src="app/src/main/res/drawable/start.png" width="250"/>
+  <img src="app/src/main/res/drawable/gameover.png" width="250"/>
 </p>
 
 ---
